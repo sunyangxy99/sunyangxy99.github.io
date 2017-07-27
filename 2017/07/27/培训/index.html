@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="一、正则表达式 1.基本语法 ^ : 字符串的开始　　  　$:字符串的结束　\ : 转义字符　　　 　 ．: 匹配单个字符([.\n]除外)\b: 匹配一个单词边界 　\B： 匹配非单词边界  [a-z]{5} ： 匹配a-z中的字符5次[^a-z]{5}： 匹配非a-z中的字符5次\d=[0-9] 匹配前面的子表达式次数　　　 　 * : 至少0次　　　　　　　　　　　　　　　　　　　+ :">
+<meta name="description" content="一、正则表达式 1.基本语法 ^ : 字符串的开始　　  　$:字符串的结束　\ : 转义字符　　　 　 ．: 匹配单个字符([.\n]除外)\b: 匹配一个单词边界 　\B： 匹配非单词边界  [a-z]{5} ： 匹配a-z中的字符5次[^a-z]{5}： 匹配非a-z中的字符5次\d=[0-9] 匹配前面的子表达式次数　　　　　* : 至少0次　　　　　　　　　　　　　　　　　　　+ : 至">
 <meta property="og:type" content="article">
 <meta property="og:title" content="培训知识点">
 <meta property="og:url" content="http://yoursite.com/2017/07/27/培训/index.html">
 <meta property="og:site_name" content="sunyangxy99的博客空间">
-<meta property="og:description" content="一、正则表达式 1.基本语法 ^ : 字符串的开始　　  　$:字符串的结束　\ : 转义字符　　　 　 ．: 匹配单个字符([.\n]除外)\b: 匹配一个单词边界 　\B： 匹配非单词边界  [a-z]{5} ： 匹配a-z中的字符5次[^a-z]{5}： 匹配非a-z中的字符5次\d=[0-9] 匹配前面的子表达式次数　　　 　 * : 至少0次　　　　　　　　　　　　　　　　　　　+ :">
+<meta property="og:description" content="一、正则表达式 1.基本语法 ^ : 字符串的开始　　  　$:字符串的结束　\ : 转义字符　　　 　 ．: 匹配单个字符([.\n]除外)\b: 匹配一个单词边界 　\B： 匹配非单词边界  [a-z]{5} ： 匹配a-z中的字符5次[^a-z]{5}： 匹配非a-z中的字符5次\d=[0-9] 匹配前面的子表达式次数　　　　　* : 至少0次　　　　　　　　　　　　　　　　　　　+ : 至">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-27T11:31:33.558Z">
+<meta property="og:updated_time" content="2017-07-27T11:40:20.798Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="培训知识点">
-<meta name="twitter:description" content="一、正则表达式 1.基本语法 ^ : 字符串的开始　　  　$:字符串的结束　\ : 转义字符　　　 　 ．: 匹配单个字符([.\n]除外)\b: 匹配一个单词边界 　\B： 匹配非单词边界  [a-z]{5} ： 匹配a-z中的字符5次[^a-z]{5}： 匹配非a-z中的字符5次\d=[0-9] 匹配前面的子表达式次数　　　 　 * : 至少0次　　　　　　　　　　　　　　　　　　　+ :">
+<meta name="twitter:description" content="一、正则表达式 1.基本语法 ^ : 字符串的开始　　  　$:字符串的结束　\ : 转义字符　　　 　 ．: 匹配单个字符([.\n]除外)\b: 匹配一个单词边界 　\B： 匹配非单词边界  [a-z]{5} ： 匹配a-z中的字符5次[^a-z]{5}： 匹配非a-z中的字符5次\d=[0-9] 匹配前面的子表达式次数　　　　　* : 至少0次　　　　　　　　　　　　　　　　　　　+ : 至">
 
 
 
@@ -324,7 +324,7 @@
 <h3 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1.基本语法"></a>1.基本语法</h3><blockquote>
 <p>^ : 字符串的开始　　  　$:字符串的结束　<br>\ : 转义字符　　　 　 ．: 匹配单个字符([.\n]除外)<br>\b: 匹配一个单词边界 　\B： 匹配非单词边界 </p>
 <p>[a-z]{5} ： 匹配a-z中的字符5次<br>[^a-z]{5}： 匹配非a-z中的字符5次<br>\d=[0-9]</p>
-<p>匹配前面的子表达式次数　　　 　 * : 至少0次　　　<br>　　　　　　　　　　　　　　　　+ : 至少1次<br>　　　　　　　　　　　　　　　　? : 至多1次<br>　　　　　　　　　　　　　　　　{n}、{n,}、{n,m}<br>　　　　　　　　　　　　　　　　n次、至少n次、n&lt;=次数&lt;=m<br><strong>注意</strong>(*, +, ?, {n}, {n,}, {n,m})后面紧跟?。非贪婪模式(匹配最少次数)。</p>
+<p>匹配前面的子表达式次数　　　　　* : 至少0次　　　<br>　　　　　　　　　　　　　　　　+ : 至少1次<br>　　　　　　　　　　　　　　　　? : 至多1次<br>　　　　　　　　　　　　　　　　{n}、{n,}、{n,m}<br>　　　　　　　　　　　　　　　　n次、至少n次、n&lt;=次数&lt;=m<br><strong>注意</strong>(*, +, ?, {n}, {n,}, {n,m})后面紧跟?。非贪婪模式(匹配最少次数)。</p>
 </blockquote>
 <h3 id="2-例题"><a href="#2-例题" class="headerlink" title="2.例题"></a>2.例题</h3><blockquote>
 <p>描述IPV4地址的正则表达式？<br>　　　分析：255-250——&gt;25[0-5]<br>　　　　　　249-200——&gt;2[0-4]\d<br>　　　　　　199-100——&gt;1\d{2}<br>　　　　　　99-0——&gt;[1-9]?\d<br>答案：^((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d) \ .){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)$</p>
@@ -342,11 +342,34 @@
 </li>
 </ul>
 <blockquote>
-<p>(<strong>5</strong>) 行内高亮块:<br>　　 `高亮`<br>　　<br> 　　 <code>高亮</code></p>
-<p>(<strong>6</strong>) 代码块的显示：<br>　　<br>　　```代码类型(C++/Java/PHP…)<br>　　   代码<br>　　```　　<br>　　<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@Sweetfish</div><div class="line"><span class="comment">// this is a test</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"hello world!"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>(<strong>7</strong>) 表格:<br>| 项目　| 价格　| 数量　| 编号　 |<br>| -----　| ----\:　| \:---\:　| \:-----　|<br>| 计算机| \$1600 | 500　| 0000　|<br>| 手机　| \$1200 | 120　| 0100　|<br>　　|----\:|　右对齐<br>　　　　|\:----\:|　居中对齐<br>　　　　　　　　　|\:----|　左对齐<br><strong>注意</strong>　|　| 与 ----\: 之间不能有全角的空格</p>
+<p>(<strong>5</strong>) 行内高亮块:<br>　　 `高亮`<br> 　　 <code>高亮</code></p>
+<p>(<strong>6</strong>) 代码块的显示：<br>　　<br>　　```代码类型(C++/Java/PHP…)<br>　　   代码<br>　　```　<br>　　<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@Sweetfish</div><div class="line"><span class="comment">// this is a test</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"hello world!"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>(<strong>7</strong>) 表格:<br>| 项目　| 价格　| 数量　| 编号　 |<br>| -----　| ----:　| :---:　| :-----　|<br>| 计算机| \$1600 | 500　| 0000　|<br>| 手机　| \$1200 | 120　| 0100　|<br>　　|----:|　右对齐<br>　　　　|:----:|　居中对齐<br>　　　　　　　　　|:----|　左对齐<br><strong>注意</strong>　|　| 与 ----: 之间不能有全角的空格</p>
 </blockquote>
-<p>　　<br>| 项目     | 价格   |  数量  | 编号 |<br>| ——– | —–: | :—-: | :— |<br>| 计算机   | \$1600 |   500  | 0000 |<br>| 手机     |  \$1200|   120  | 0100 |</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align:right">价格</th>
+<th style="text-align:center">数量</th>
+<th style="text-align:left">编号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>计算机</td>
+<td style="text-align:right">\$1600</td>
+<td style="text-align:center">500</td>
+<td style="text-align:left">0000</td>
+</tr>
+<tr>
+<td>手机</td>
+<td style="text-align:right">\$1200</td>
+<td style="text-align:center">120</td>
+<td style="text-align:left">0100</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
 <p>(<strong>8</strong>) 流程图</p>
 <p>```flow<br>st=&gt;start: Start<br>op=&gt;operation: Your Operation<br>cond=&gt;condition: Yes or No?<br>e=&gt;end<br>st-&gt;op-&gt;cond<br>cond(yes)-&gt;e<br>cond(no)-&gt;op<br>```</p>
