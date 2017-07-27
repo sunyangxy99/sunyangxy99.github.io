@@ -1677,7 +1677,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #13224b;
+  background: #ff82ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2516,6 +2516,6 @@ embed {
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
 }
-body {
-  background: url("/images/niu.jpg");
+.site-meta {
+  background: #0684bd;
 }
