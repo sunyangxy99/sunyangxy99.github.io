@@ -1677,7 +1677,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #73a2ff;
+  background: #6a0b9e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2518,4 +2518,13 @@ embed {
 }
 .site-meta {
   background: #0684bd;
+}
+body {
+  color: #000;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdr6QwGE1R0D2MgKfwzsoWV28icLP-NKBMatPwm9MZRecWbNN2") fixed;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+  font-size: 12px;
+  min-height: 101%;
 }
