@@ -254,6 +254,122 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/15/加密程序/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Y@的二次方">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/yan.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sunyangxy99">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/15/加密程序/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T09:58:34+08:00">
+                2017-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: 文件加密程序</p>
+<hr>
+<p>```<br>import java.io.IOException;<br>import java.io.File;<br>import java.io.FileInputStream;<br>import java.io.FileOutputStream;<br>import java.io.BufferedInputStream;<br>import java.io.BufferedOutputStream;<br>import java.util.Scanner;<br>class test1<br>{<br>    public static void main(String[] args)<br>    {<br>        sop(“<strong><strong>*</strong></strong>欢迎使用加密软件<strong><strong><strong>**</strong></strong></strong>“);<br>        sop(“<strong><strong>*</strong></strong>请输入要加密文件的路径<strong><strong><strong>**</strong></strong></strong>“);<br>        String path=MyInstance.getInstance().next();<br>        sop(“<strong>**</strong>1.加密   2.解密<strong><strong>**</strong></strong>“);<br>        int action=MyInstance.getInstance().nextInt();<br>        sop(“请输入密码”);<br>        String password=MyInstance.getInstance().next();<br>        File file=null;<br>        switch(action){<br>            case 1:<br>                file=encryption(path,password);<br>            break;<br>            case 2:<br>                file=deciphering(path,password);<br>            break;<br>        }<br>        if(file!=null)<br>            sop((action==1?”加”:”解”)+”密成功！”+file.getAbsolutePath());<br>        else<br>            sop((action==1?”加”:”解”)+”密失败！”);<br>    }<br>    //打印封装<br>    public static void sop(String str){<br>        System.out.println(str);<br>    }<br>    //加密函数<br>    public static File encryption(String path,String password){<br>        File infile=new File(path);<br>        File outfile=new File(infile.getName());<br>        BufferedInputStream in=null;<br>        BufferedOutputStream out=null;<br>        try{<br>            in=new BufferedInputStream(new FileInputStream(infile));<br>            out=new BufferedOutputStream(new FileOutputStream(outfile));<br>            byte[] pawbytes=password.getBytes();<br>            int len=0;<br>            int i=0;<br>            while((len=in.read())!=-1){<br>                 byte b=(byte)len;<br>                 out.write(b^pawbytes[i]);<br>                 i++;<br>                 if(i==pawbytes.length)<br>                     i=0;}<br>            return outfile;<br>            }catch(IOException e){<br>                e.printStackTrace();}<br>            catch(NullPointerException e){<br>                e.printStackTrace();<br>            }finally{<br>                    try{if(in!=null)<br>                        in.close();<br>                    if(out!=null)<br>                        out.flush();<br>                        out.close();}<br>                        catch(IOException e){<br>                        e.printStackTrace();<br>                        }<br>                }<br>                return null;<br>        }<br>    //解密函数<br>    public static File deciphering(String path,String password){<br>        return encryption(path,password);<br>        }<br>}<br>//设计一个输入的单例设计模式类<br>class MyInstance<br>{<br>    private static MyInstance instance;<br>    private Scanner in=new Scanner(System.in);<br>    private MyInstance(){}<br>    public static MyInstance getInstance(){<br>        if(instance==null)<br>            instance=new MyInstance();<br>        return instance;<br>    }<br>    public String next(){<br>        return in.next();<br>    }<br>    public int nextInt(){<br>        return in.nextInt();<br>    }</p>
+<p>}<br>、、、</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/18/GET 和 POST传递参数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -605,119 +721,6 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/29/HTTPS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Y@的二次方">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/yan.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="sunyangxy99">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/29/HTTPS/" itemprop="url">HTTPS</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T09:02:58+08:00">
-                2017-07-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>　　https:是一种以安全为目的的http通道，也即安全版本的http协议。是在http协议下加入了ssl/tls协议层。<br>其作用是①对传输的内容进行加密，②对站点可以进行身份认证（确认网站的真实性），③还可以保证数据的完整性，使得一些抓包工具即使抓取到网站的信息也无法进行欺诈的行为。</p>
-<p>　　其缺点是①第一次登陆网站比http慢，是因为握手阶段比较费时；②https连接缓存不如http高效，会增加数据开销和功耗；③ssl证书需要钱，ssl证书通常需要绑定ip，不能在同一ip上绑定多个域名，ipv4资源不可能支撑这个消耗。④https协议的加密范围也比较有限，在黑客攻击、拒绝服务攻击、服务器劫持等方面几乎起不到什么作用。最关键的，ssl证书的信用链体系并不安全，特别是在某些国家可以控制CA根证书的情况下，中间人攻击一样可行。<br>　　<br>　　http与https的区别：①https需要到CA申请证书；②http是明文传输，https是具有安全性的ssl加密传输协议；③http的端口是80，https默认端口是443；④http是一种无状态的连接，https协议是由http+ssl协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/29/Markdown/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -873,6 +876,119 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/29/HTTPS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Y@的二次方">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/yan.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sunyangxy99">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/29/HTTPS/" itemprop="url">HTTPS</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T09:02:58+08:00">
+                2017-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>　　https:是一种以安全为目的的http通道，也即安全版本的http协议。是在http协议下加入了ssl/tls协议层。<br>其作用是①对传输的内容进行加密，②对站点可以进行身份认证（确认网站的真实性），③还可以保证数据的完整性，使得一些抓包工具即使抓取到网站的信息也无法进行欺诈的行为。</p>
+<p>　　其缺点是①第一次登陆网站比http慢，是因为握手阶段比较费时；②https连接缓存不如http高效，会增加数据开销和功耗；③ssl证书需要钱，ssl证书通常需要绑定ip，不能在同一ip上绑定多个域名，ipv4资源不可能支撑这个消耗。④https协议的加密范围也比较有限，在黑客攻击、拒绝服务攻击、服务器劫持等方面几乎起不到什么作用。最关键的，ssl证书的信用链体系并不安全，特别是在某些国家可以控制CA根证书的情况下，中间人攻击一样可行。<br>　　<br>　　http与https的区别：①https需要到CA申请证书；②http是明文传输，https是具有安全性的ssl加密传输协议；③http的端口是80，https默认端口是443；④http是一种无状态的连接，https协议是由http+ssl协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -919,7 +1035,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
