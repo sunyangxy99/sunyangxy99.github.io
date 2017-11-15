@@ -254,6 +254,118 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/15/加密程序/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Y@的二次方">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/yan.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sunyangxy99">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/15/加密程序/" itemprop="url">文件加密程序</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T09:58:34+08:00">
+                2017-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="JAVA文件加密程序"><a href="#JAVA文件加密程序" class="headerlink" title="JAVA文件加密程序"></a>JAVA文件加密程序</h2><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div></pre></td><td class="code"><pre><div class="line">import java.io.IOException;</div><div class="line">import java.io.File;</div><div class="line">import java.io.FileInputStream;</div><div class="line">import java.io.FileOutputStream;</div><div class="line">import java.io.BufferedInputStream;</div><div class="line">import java.io.BufferedOutputStream;</div><div class="line">import java.util.Scanner;</div><div class="line">class test1 </div><div class="line">&#123;</div><div class="line">	public static void main(String[] args) </div><div class="line">	&#123;</div><div class="line">		sop(&quot;*********欢迎使用加密软件**************&quot;);</div><div class="line">		sop(&quot;*********请输入要加密文件的路径**************&quot;);</div><div class="line">		String path=MyInstance.getInstance().next();</div><div class="line">		sop(&quot;******1.加密   2.解密**********&quot;);</div><div class="line">		int action=MyInstance.getInstance().nextInt();</div><div class="line">		sop(&quot;请输入密码&quot;);</div><div class="line">	    String password=MyInstance.getInstance().next();</div><div class="line">		File file=null;</div><div class="line">		switch(action)&#123;</div><div class="line">			case 1:</div><div class="line">				file=encryption(path,password);</div><div class="line">			break;</div><div class="line">			case 2:</div><div class="line">				file=deciphering(path,password);</div><div class="line">			break;</div><div class="line">		&#125;</div><div class="line">		if(file!=null)</div><div class="line">			sop((action==1?&quot;加&quot;:&quot;解&quot;)+&quot;密成功！&quot;+file.getAbsolutePath());</div><div class="line">		else</div><div class="line">            sop((action==1?&quot;加&quot;:&quot;解&quot;)+&quot;密失败！&quot;);</div><div class="line">	&#125;</div><div class="line">    //打印封装</div><div class="line">	public static void sop(String str)&#123;</div><div class="line">		System.out.println(str);</div><div class="line">	&#125;</div><div class="line">    //加密函数</div><div class="line">	public static File encryption(String path,String password)&#123;</div><div class="line">		File infile=new File(path);</div><div class="line">		File outfile=new File(infile.getName());</div><div class="line">		BufferedInputStream in=null;</div><div class="line">		BufferedOutputStream out=null;</div><div class="line">		try&#123;</div><div class="line">			in=new BufferedInputStream(new FileInputStream(infile));</div><div class="line">		    out=new BufferedOutputStream(new FileOutputStream(outfile));</div><div class="line">		    byte[] pawbytes=password.getBytes();</div><div class="line">		    int len=0;</div><div class="line">		    int i=0;</div><div class="line">	    	while((len=in.read())!=-1)&#123;</div><div class="line">			     byte b=(byte)len;</div><div class="line">			     out.write(b^pawbytes[i]);</div><div class="line">			     i++;</div><div class="line">			     if(i==pawbytes.length)</div><div class="line">			     	i=0;&#125;</div><div class="line">			return outfile;</div><div class="line">			&#125;catch(IOException e)&#123;</div><div class="line">				e.printStackTrace();&#125;</div><div class="line">			catch(NullPointerException e)&#123;</div><div class="line">				e.printStackTrace();</div><div class="line">			&#125;finally&#123;</div><div class="line">					try&#123;if(in!=null)</div><div class="line">						in.close();</div><div class="line">					if(out!=null)</div><div class="line">						out.flush();</div><div class="line">						out.close();&#125;</div><div class="line">						catch(IOException e)&#123;</div><div class="line">						e.printStackTrace();</div><div class="line">						&#125;</div><div class="line">				&#125;</div><div class="line">				return null;</div><div class="line">		&#125;</div><div class="line">	//解密函数</div><div class="line">	public static File deciphering(String path,String password)&#123;</div><div class="line">		return encryption(path,password);</div><div class="line">		&#125;</div><div class="line">&#125;</div><div class="line">//设计一个输入的单例设计模式类</div><div class="line">class MyInstance</div><div class="line">&#123;</div><div class="line">	private static MyInstance instance;</div><div class="line">	private Scanner in=new Scanner(System.in);</div><div class="line">	private MyInstance()&#123;&#125;</div><div class="line">	public static MyInstance getInstance()&#123;</div><div class="line">		if(instance==null)</div><div class="line">			instance=new MyInstance();</div><div class="line">		return instance;</div><div class="line">	&#125;</div><div class="line">    public String next()&#123;</div><div class="line">		return in.next();</div><div class="line">	&#125;</div><div class="line">	public int nextInt()&#123;</div><div class="line">		return in.nextInt();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/18/GET 和 POST传递参数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -919,7 +1031,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
